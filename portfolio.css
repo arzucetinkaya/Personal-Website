@@ -17,6 +17,8 @@
 
   --pf-gutter: 24px;
   --pf-max: 1080px;
+  --pf-anim-size: clamp(280px, 42vw, 480px);
+  --pf-anim-gap: 24px;
 }
 
 * {
@@ -369,11 +371,32 @@ a {
 }
 
 .pf-media-frame--phone {
-  width: clamp(240px, 38vw, 420px);
+  width: calc(var(--pf-anim-size) * 2 + var(--pf-anim-gap));
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .pf-media-frame--muted video {
+  pointer-events: none;
+}
+
+.pf-media-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--pf-anim-gap);
+  flex-wrap: wrap;
+}
+
+.pf-media-frame--square {
+  width: var(--pf-anim-size);
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.pf-media-frame--square video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   pointer-events: none;
 }
 
