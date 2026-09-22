@@ -179,9 +179,17 @@ ul {
   justify-content: center;
   padding-bottom: 4px;
   border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.nav-link:hover {
+  border-bottom-color: var(--color-text-muted);
 }
 
 .nav-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: 20px;
@@ -189,10 +197,31 @@ ul {
   line-height: 1;
   white-space: nowrap;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.nav-link--active {
+.nav-link:hover a {
+  color: var(--color-text-muted);
+}
+
+.nav-link__external {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nav-link--active,
+.nav-link--active:hover {
   border-bottom-color: var(--color-text);
+}
+
+.nav-link--active:hover a {
+  color: var(--color-text);
 }
 
 /* Hamburger toggle (mobile only) */
@@ -1229,6 +1258,17 @@ a.gallery-item__title {
   padding-left: 0;
   padding-right: 0;
   max-width: none;
+}
+
+.portfolio-bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 812px;
+  margin: 0 auto;
+  padding: 100px var(--gutter) 0;
 }
 
 .selected-work {
