@@ -361,9 +361,51 @@ a {
   gap: 32px;
 }
 
+.pf-approach {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pf-approach__label {
+  font-family: var(--pf-font-heading);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--pf-text);
+}
+
+.pf-approach__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.pf-approach__point {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.pf-approach__point-title {
+  font-family: var(--pf-font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--pf-accent);
+  margin-bottom: 8px;
+}
+
+.pf-approach__point-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--pf-text-muted);
+}
+
 .pf-media-frame {
   border-radius: 16px;
   overflow: hidden;
+}
+
+.pf-media-frame:has(video) {
   background: #000;
 }
 
