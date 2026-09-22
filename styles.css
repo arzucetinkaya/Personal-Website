@@ -448,9 +448,18 @@ ul {
   line-height: 1;
 }
 
+.about-name .location {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: var(--color-text-muted);
+}
+
 .about-name .role {
-  font-size: 34px;
-  line-height: 1.1;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .info-block {
@@ -747,7 +756,7 @@ ul {
   }
 
   .about-name .role {
-    font-size: 26px;
+    font-size: 18px;
   }
 
   .about-text h1 {

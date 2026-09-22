@@ -16,7 +16,7 @@
   --pf-font-ui: 'Inter', sans-serif;
 
   --pf-gutter: 24px;
-  --pf-max: 1080px;
+  --pf-max: clamp(1080px, 78vw, 1600px);
   --pf-anim-size: clamp(280px, 42vw, 480px);
   --pf-anim-gap: 24px;
 }
@@ -174,7 +174,7 @@ a {
 }
 
 .pf-hero__photo {
-  flex: 0 0 280px;
+  flex: 0 0 clamp(280px, 22vw, 400px);
   aspect-ratio: 1678 / 1888;
   border-radius: 18px;
   overflow: hidden;
@@ -195,6 +195,7 @@ a {
   font-family: var(--pf-font-ui);
   font-weight: 600;
   font-size: 13px;
+  line-height: 1.5;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--pf-accent);
@@ -207,6 +208,13 @@ a {
   font-size: clamp(36px, 4.6vw, 56px);
   line-height: 1.04;
   letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.pf-hero__location {
+  font-family: var(--pf-font-ui);
+  font-size: 14px;
+  color: var(--pf-text-muted);
   margin-bottom: 22px;
 }
 
@@ -214,7 +222,6 @@ a {
   font-size: 17px;
   line-height: 1.65;
   color: var(--pf-text-muted);
-  max-width: 580px;
   margin-bottom: 36px;
 }
 
